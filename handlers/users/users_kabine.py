@@ -20,7 +20,7 @@ async def show_saved_posts(message: types.Message, state: FSMContext):
     msg = f""
     for number, post in enumerate(saved_posts, 1):
         msg += f"{number}. {post['post_name']}\n"
-        msg += f"<code>@Pb_post_bot {post['post_id']}</code>\n"
+        msg += f"<code>@post_bot_postbot {post['post_id']}</code>\n"
         msg += f"🗑 /delete_{post['post_id']}"
     await message.answer(msg, reply_markup=yashir)
 

@@ -148,7 +148,7 @@ async def process_buttons(message: types.Message, state: FSMContext):
             reply_markup=send_info_markup
         )
         await message.answer(
-            f"@Pb_post_bot <code>{post_id}</code>", reply_markup=build_keyboards_menu(check_lang)
+            f"@post_bot_postbot <code>{post_id}</code>", reply_markup=build_keyboards_menu(check_lang)
         )
         await state.finish()
     else:
